@@ -38,9 +38,9 @@ class AdDomainController extends Controller
         ]);
     }
 
-    public function destroy($id)
+    public function destroy()
     {
-        AdDomain::findOrFail($id)->delete();
+        AdDomain::first()->delete();
 
         return response()->json(null, 204);
     }
