@@ -3,10 +3,6 @@
 use App\Http\Controllers\AdDomainController;
 use Illuminate\Support\Facades\Route;
 
-Route::get("/", function () {
-    return view("home");
-});
-
 Route::middleware(["cors"])->group(function () {
     Route::get("/ad-domains", "AdDomainController@index");
 });
